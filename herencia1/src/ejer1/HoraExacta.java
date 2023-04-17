@@ -3,30 +3,39 @@ package ejer1;
 public class HoraExacta extends Hora{
 	protected int segundos=0;
 	
-	Hora h= new Hora();
 	
 	HoraExacta(int hora, int minutos, int segundos){
-		h.hora=hora;
-		h.minutos=minutos;
+		super(hora,minutos);
 		this.segundos=segundos;
 	}
-	boolean setsetSegundos(int valor) {
-		boolean intento = false;
+	
+	void setSegundos(int valor) {
+		
 		if (valor<60 && valor>=0) {
 			segundos=valor;
-			intento=true;
 		}
-		return intento;
 		
 	}
 	
+	@Override
 	void inc(){
 		segundos++;
 		if (segundos>=60) {
 			segundos=0;
-			h.inc();
+			super.inc();
 		}
 		
 	}
 	
+	@Override
+	public String  toString() {
+		String cadena="";
+		
+		if (segundos <10 && segundos>0) {
+			cadena+="0";
+		}
+		cadena+=segundos;
+	
+		return cadena;
+	}
 }

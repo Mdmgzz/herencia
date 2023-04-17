@@ -47,11 +47,16 @@ public class Hora {
 	
 	public String  toString() {
 		String cadena="";
-		String h="";
-		String m="";
-		h="HORA: "+hora;
-		m="MINUTOS: "+minutos;
-		cadena=h+" "+m;
+
+		if (hora <10 && hora>0) {
+			cadena+="0";
+		}
+		cadena+=hora+":";
+		if (minutos <10 && minutos>0) {
+			cadena+="0";
+		}
+		cadena+=minutos+":";
+		
 		return cadena;
 	}
 }
