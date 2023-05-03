@@ -2,15 +2,17 @@ package ejer03;
 
 public class Productos {
 
-
+		//atributos de la clase
 		private String nombre;
 		private double precio;
 
+		// constructor con parametros
 		public Productos(String nombre, double precio) {
 			this.nombre = nombre;
 			this.precio = precio;
 		}
 
+		// getters y stters
 		public String getNombre() {
 			return nombre;
 		}
