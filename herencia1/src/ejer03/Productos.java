@@ -4,9 +4,9 @@ public class Productos {
 
 
 		private String nombre;
-		private int precio;
+		private double precio;
 
-		public Productos(String nombre, int precio) {
+		public Productos(String nombre, double precio) {
 			this.nombre = nombre;
 			this.precio = precio;
 		}
@@ -19,14 +19,24 @@ public class Productos {
 			this.nombre = nombre;
 		}
 
-		public int getPrecio() {
+		public double getPrecio() {
 			return precio;
 		}
 
 		public void setPrecio(int precio) {
 			this.precio = precio;
 		}
-	
+	/**
+	 * calcula la cantidad por el precio del producto
+	 * @param cantidad cantidad de productos
+	 * @return devuelve como resultado el double de la multiplicacion 
+	 */
+		public double calcular ( int cantidad) {
+			double res=0;
+
+			res= cantidad*precio;
+			return res;
+		}
 	
 	
 }

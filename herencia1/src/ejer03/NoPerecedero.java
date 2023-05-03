@@ -2,7 +2,8 @@ package ejer03;
 
 public class NoPerecedero extends Productos {
 		private String tipo;
-		public NoPerecedero(String nombre, int precio) {
+		//objeto para llamar a la clase perecedero
+		public NoPerecedero(String nombre, double precio) {
 			super(nombre, precio);
 		}
 
@@ -17,6 +18,15 @@ public class NoPerecedero extends Productos {
 
 		public void setTipo(String tipo) {
 			this.tipo = tipo;
+		}
+		@Override
+		public double calcular ( int cantidad) {
+			double res=0;
+			
+			res=super.calcular(cantidad);
+			
+			return res;
+			
 		}
 
 }
